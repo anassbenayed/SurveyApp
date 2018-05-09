@@ -19,6 +19,7 @@ import { ChartsModalPage } from '../modals/charts-modal';
 
 import { TimingInterceptor } from '../interceptors/timing-interceptor';
 import { LocalNotifications } from '@ionic-native/local-notifications';
+import { Push } from '@ionic-native/push';
 
 @NgModule({
     declarations: [
@@ -46,6 +47,7 @@ import { LocalNotifications } from '@ionic-native/local-notifications';
     providers: [
         StatusBar,
         SplashScreen,
+        Push,
         {provide: ErrorHandler, useClass: IonicErrorHandler},
         {provide: HTTP_INTERCEPTORS, useClass: TimingInterceptor, multi: true},
         SurveyProvider,
